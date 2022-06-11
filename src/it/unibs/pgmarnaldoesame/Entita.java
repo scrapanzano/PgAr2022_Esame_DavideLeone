@@ -1,13 +1,16 @@
 package it.unibs.pgmarnaldoesame;
 
+/**
+ * Questa classe rappresenta le entita all'interno del gioco.
+ * @author Davide Leone
+ *
+ */
 public class Entita {
 	
 	private String nome;
 	private int vita;
 	private int attaccoBase;
 	private int difesaBase;
-	private int [] posizioneAttuale = new int [2];
-	
 	
 	public Entita(String nome, int vita, int attaccoBase, int difesaBase) {
 		this.nome = nome;
@@ -48,14 +51,6 @@ public class Entita {
 		this.difesaBase = difesaBase;
 	}
 	
-	public int[] getPosizioneAttuale() {
-		return posizioneAttuale;
-	}
-
-	public void setPosizioneAttuale(int[] posizioneAttuale) {
-		this.posizioneAttuale = posizioneAttuale;
-	}
-
 	@Override
 	public String toString() {
 		return "Entita [nome=" + nome + ", vita=" + vita + ", attaccoBase=" + attaccoBase + ", difesaBase=" + difesaBase

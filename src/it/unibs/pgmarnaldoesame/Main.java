@@ -9,6 +9,13 @@ public class Main {
 		Partita partita = Partita.inizializzaPartita();
 		
 		System.out.println(partita.stampaMappa());
+		
+		try {
+			partita.cicloTurno();
+		} catch (IllegalMovementException e) {
+			System.out.println(e.getMessage());
+		}
+		
 
 	}
 

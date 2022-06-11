@@ -14,7 +14,6 @@ public class LettoreMappeXML {
 	
 	private static final String FILE_PATH = "mappe\\";
 	
-
 	
 	public static int [][] leggiMappa(HashMap<Integer, String> legendaSimboli) {
 		XMLInputFactory xmlif = null;
@@ -61,7 +60,8 @@ try {
 											{
 												mappa[contaRiga][contaColonna] = i;
 												break;
-											}	
+											}
+											
 										}
 										
 										contaColonna++;
