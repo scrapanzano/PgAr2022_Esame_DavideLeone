@@ -10,7 +10,7 @@ import javax.xml.stream.XMLStreamReader;
 
 
 
-public class LetturaMappeXML {
+public class LettoreMappeXML {
 	
 	private static final String FILE_PATH = "mappe\\";
 	

@@ -1,9 +1,14 @@
 package it.unibs.pgmarnaldoesame;
 
+import it.unibs.myexception.IllegalMovementException;
+
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		Partita partita = Partita.inizializzaPartita();
+		
+		System.out.println(partita.stampaMappa());
 
 	}
 

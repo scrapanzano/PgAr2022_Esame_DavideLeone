@@ -6,6 +6,8 @@ public class Entita {
 	private int vita;
 	private int attaccoBase;
 	private int difesaBase;
+	private int [] posizioneAttuale = new int [2];
+	
 	
 	public Entita(String nome, int vita, int attaccoBase, int difesaBase) {
 		this.nome = nome;
@@ -44,6 +46,14 @@ public class Entita {
 
 	public void setDifesaBase(int difesaBase) {
 		this.difesaBase = difesaBase;
+	}
+	
+	public int[] getPosizioneAttuale() {
+		return posizioneAttuale;
+	}
+
+	public void setPosizioneAttuale(int[] posizioneAttuale) {
+		this.posizioneAttuale = posizioneAttuale;
 	}
 
 	@Override
