@@ -6,13 +6,12 @@ import it.unibs.fp.mylib.InputDati;
 import it.unibs.myexception.IllegalMovementException;
 
 public class Partita {
+	
 	private static final int VALORE_MOVIMENTO = 1;
-
-
+	
 	private static final String MSG_MOVIMENTO = "Inserisci la direzione in cui vuoi muoverti [W, A, S, D]: ";
-
-
 	private static final String TASTI_MOVIMENTO = "WASD";
+	private static final String NOME_MOSTRO = "Dijkstra";
 	
 	
 	private Personaggio personaggio;
@@ -40,11 +39,17 @@ public class Partita {
 	public void cicloTurno() throws IllegalMovementException {
 		do {
 			muoviPersonaggio();
+			if(mappa[this.personaggio.getPosizioneAttuale()[0]][this.personaggio.getPosizioneAttuale()[1]] == 3)
+			{
+				Mostro mostro = Mostro.creaMostro();
+				cicloCombattimento(mostro);
+			}
 			if(this.personaggio.getPosizioneAttuale()[0] != Partita.posizioneInizialePersonaggio[0] || this.personaggio.getPosizioneAttuale()[1] != Partita.posizioneInizialePersonaggio[1])
 			{
 				aggiornaMappa();
 			}
 			System.out.println(toString());
+
 		}while(true);
 		
 	}
@@ -83,6 +88,11 @@ public class Partita {
 		Partita.mappa[Partita.posizioneInizialePersonaggio[0]][Partita.posizioneInizialePersonaggio[1]] = 1;
 		Partita.mappa[posizioneX][posizioneY] = 2;
 			
+	}
+	
+	public boolean cicloCombattimento(Mostro mostro) {
+		System.out.println("Nel ciclo di combattimento");
+		return true;
 	}
 	
 	public String stampaMappa() {

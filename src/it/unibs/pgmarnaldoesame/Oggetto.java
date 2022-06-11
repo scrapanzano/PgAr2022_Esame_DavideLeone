@@ -3,6 +3,7 @@ package it.unibs.pgmarnaldoesame;
 public class Oggetto {
 	
 	private int tipo;
+	private String nome;
 	private String descrizione;
 	
 	public Oggetto(int tipo, String descrizione) {
